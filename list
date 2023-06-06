@@ -1,0 +1,13 @@
+list_1 = [1,2,3,4,5,6]
+list_from_string2="I want to play a game".replace(" ","**")
+list_from_string="I want to play a game".split(" ")
+print(list_from_string2,list_from_string)
+list_1.append(7)
+print(list_1)
+list_1.extend([8,9])
+print(list_1)
+list_1.pop()
+print(list_1)
+list_1.remove(2)
+print(list_1)
+print(f"sum={sum(list_1)},max={max(list_1)}")

@@ -1,0 +1,7 @@
+dic = {
+    "a":"A"
+    "di":{
+        "c":"C"
+    }
+}
+print(dic["a"],dic["di"]["c"])
