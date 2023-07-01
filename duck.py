@@ -16,6 +16,14 @@ class Duck(Poultry) :
     def duckquake(self):
         print(f"{self.color} duck quake like {self.sound}")
 
+class Goose(Poultry) :
+    def __init__(self,sound,color):
+        super().__init__(sound,color)
+
+    def gooseeat(self) :
+        print(f"{self.color} goose eat vegetable and popcorn")
+        
+
 if __name__ == "__main__":
     Bd = Duck("quakkkke","blue")
     Rd = Duck("Dukkkke","red")
