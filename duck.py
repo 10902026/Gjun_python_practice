@@ -9,12 +9,11 @@ class Poultry :
         print(f"{self.color} {self.species}")
         
 
-class Duck :
+class Duck(Poultry) :
     def __init__(self,sound,color):
-        self.sound=sound
-        self.color=color
+        super().__init__(sound,color)
     
-    def duckbehavior(self):
+    def duckquake(self):
         print(f"{self.color} duck quake like {self.sound}")
 
 if __name__ == "__main__":
