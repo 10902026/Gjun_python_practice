@@ -40,15 +40,12 @@ def get_category_news_blocks(category_main_page_link):
     return block_elements
 
 
-if __name__ == '__main__':
-
-    international_news_href = get_category_main_page_link("國際")
-
-    internal_news_blocks = get_category_news_blocks(international_news_href)
-
+def get_google_news(category_name):
+    news_href = get_category_main_page_link(category_name)
+    news_blocks = get_category_news_blocks(news_href)
     # 6. 找到每個block內, 所有的新聞標題與超連結
     block_news = dict()
-    for block_index, block in enumerate(internal_news_blocks):
+    for block_index, block in enumerate(news_blocks):
         titles = list()
         # 6.1. 找標題
         for title_element in block.find_all('h4', {'class': 'gPFEn'}):
@@ -74,4 +71,10 @@ if __name__ == '__main__':
         if result:
             block_news[block_index] = result
 
-    pprint.pprint(block_news[0])
+    return block_news
+
+
+if __name__ == '__main__':
+
+    news = get_google_news(category_name="國際")
+    pprint.pprint(news[0])
