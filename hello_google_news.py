@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World</p>"
+    return "<p>Hello, World initial page</p>"
 
 
 @app.route("/google_news/<category_name>")
