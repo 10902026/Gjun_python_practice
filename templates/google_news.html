@@ -1,0 +1,4 @@
+    {% for block_id, news in google_news %}
+    {{block_id}}
+    {% for block_news in news %} {{block_news[0]}}
+    {% endfor %} {% endfor %}
